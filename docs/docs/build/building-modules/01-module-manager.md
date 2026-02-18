@@ -182,11 +182,11 @@ https://github.com/cosmos/cosmos-sdk/blob/v0.53.0/types/module/module.go#L223-L2
 
 ### `HasPreBlocker`
 
-The `HasPreBlocker` is an extension interface from `appmodule.AppModule`. All modules that have an `PreBlock` method implement this interface.
+The `HasPreBlocker` is an extension interface from `appmodule.AppModule`. All modules that have a `PreBlock` method implement this interface.
 
 ### `HasBeginBlocker`
 
-The `HasBeginBlocker` is an extension interface from `appmodule.AppModule`. All modules that have an `BeginBlock` method implement this interface.
+The `HasBeginBlocker` is an extension interface from `appmodule.AppModule`. All modules that have a `BeginBlock` method implement this interface.
 
 ```go reference
 https://github.com/cosmos/cosmos-sdk/blob/v0.53.0/core/appmodule/module.go#L73-L80
@@ -196,7 +196,7 @@ https://github.com/cosmos/cosmos-sdk/blob/v0.53.0/core/appmodule/module.go#L73-L
 
 ### `HasEndBlocker`
 
-The `HasEndBlocker` is an extension interface from `appmodule.AppModule`. All modules that have an `EndBlock` method implement this interface. If a module needs to return validator set updates (staking), they can use `HasABCIEndBlock`
+The `HasEndBlocker` is an extension interface from `appmodule.AppModule`. All modules that have an `EndBlock` method implement this interface. If a module needs to return validator set updates (staking), it can use `HasABCIEndBlock`
 
 ```go reference
 https://github.com/cosmos/cosmos-sdk/blob/v0.53.0/core/appmodule/module.go#L83-L89
@@ -311,7 +311,7 @@ The module manager is used throughout the application whenever an action on a co
 * `Precommit(ctx context.Context)`: During [`Commit`](../../learn/advanced/00-baseapp.md#commit), this function is called from `BaseApp` immediately before the [`deliverState`](../../learn/advanced/00-baseapp.md#state-updates) is written to the underlying [`rootMultiStore`](../../learn/advanced/04-store.md#commitmultistore) and, in turn calls the `Precommit` function of each modules implementing the `HasPrecommit` interface, in the order defined in `OrderPrecommiters`. It creates a child [context](../../learn/advanced/02-context.md) where the underlying `CacheMultiStore` is that of the newly committed block's [`finalizeblockstate`](../../learn/advanced/00-baseapp.md#state-updates).
 * `PrepareCheckState(ctx context.Context)`: During [`Commit`](../../learn/advanced/00-baseapp.md#commit), this function is called from `BaseApp` immediately after the [`deliverState`](../../learn/advanced/00-baseapp.md#state-updates) is written to the underlying [`rootMultiStore`](../../learn/advanced/04-store.md#commitmultistore) and, in turn calls the `PrepareCheckState` function of each module implementing the `HasPrepareCheckState` interface, in the order defined in `OrderPrepareCheckStaters`. It creates a child [context](../../learn/advanced/02-context.md) where the underlying `CacheMultiStore` is that of the next block's [`checkState`](../../learn/advanced/00-baseapp.md#state-updates). Writes to this state will be present in the [`checkState`](../../learn/advanced/00-baseapp.md#state-updates) of the next block, and therefore this method can be used to prepare the `checkState` for the next block.
 
-Here's an example of a concrete integration within an `simapp`:
+Here's an example of a concrete integration within a `simapp`:
 
 ```go reference
 https://github.com/cosmos/cosmos-sdk/blob/v0.53.0/simapp/app.go#L510-L533
