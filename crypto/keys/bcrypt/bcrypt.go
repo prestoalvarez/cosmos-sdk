@@ -19,8 +19,8 @@ import (
 )
 
 const (
-	MinCost     uint32 = 4  // the minimum allowable cost as passed in to GenerateFromPassword
-	MaxCost     uint32 = 31 // the maximum allowable cost as passed in to GenerateFromPassword
+	MinCost     uint32 = 4  // the minimum allowable cost as passed into GenerateFromPassword
+	MaxCost     uint32 = 31 // the maximum allowable cost as passed into GenerateFromPassword
 	DefaultCost uint32 = 10 // the cost that will actually be set if a cost below MinCost is passed into GenerateFromPassword
 )
 
