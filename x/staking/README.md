@@ -115,7 +115,7 @@ Validators can have one of three statuses
   before their tokens are moved to their accounts from the `BondedPool`.
 
 :::warning
-Tombstoning is permanent, once tombstoned a validator's consensus key can not be reused within the chain where the tombstoning happened.
+Tombstoning is permanent, once tombstoned a validator's consensus key cannot be reused within the chain where the tombstoning happened.
 :::
 
 Validators objects should be primarily stored and accessed by the
