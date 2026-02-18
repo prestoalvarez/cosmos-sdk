@@ -144,7 +144,7 @@ and then proxies the underlying CRUD call to the underlying store. Note, the
 ### `cachemulti.Store` & `rootmulti.Store`
 
 The `rootmulti.Store` acts as an abstraction around a series of stores. Namely,
-it implements the `CommitMultiStore` an `Queryable` interfaces. Through the
+it implements the `CommitMultiStore` and `Queryable` interfaces. Through the
 `rootmulti.Store`, an SDK module can request access to a `KVStore` to perform
 state CRUD operations and queries by holding access to a unique `KVStoreKey`.
 
