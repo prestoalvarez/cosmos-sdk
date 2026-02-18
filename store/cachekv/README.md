@@ -58,7 +58,7 @@ A database that will be populated by the keys in `unsortedCache` during iteratio
 
 The `Set`, `Get`, and `Delete` functions all call `setCacheValue()`, which is the only entry point to mutating `cache` (besides `Write()`, which clears it).
 
-`setCacheValue()` inserts a key-value pair into `cache`. Two boolean parameters, `deleted` and `dirty`, are passed in to flag whether the inserted key should also be inserted into the `deleted` and `dirty` sets. Keys will be removed from the `deleted` set if they are written to after being deleted.
+`setCacheValue()` inserts a key-value pair into `cache`. Two boolean parameters, `deleted` and `dirty`, are passed to indicate whether the inserted key should also be inserted into the `deleted` and `dirty` sets. Keys will be removed from the `deleted` set if they are written to after being deleted.
 
 ### `Get`
 
