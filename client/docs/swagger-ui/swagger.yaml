@@ -8592,7 +8592,7 @@ paths:
                       format: int64
                   description: Validator is the type for the validator-set.
               pagination:
-                description: pagination defines an pagination for the response.
+                description: pagination defines a pagination for the response.
                 type: object
                 properties:
                   nextKey:
