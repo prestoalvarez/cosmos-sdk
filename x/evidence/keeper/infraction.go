@@ -110,8 +110,8 @@ func (k Keeper) handleEquivocationEvidence(ctx context.Context, evidence *types.
 
 	// Slash validator. The `power` is the int64 power of the validator as provided
 	// to/by CometBFT. This value is validator.Tokens as sent to CometBFT via
-	// ABCI, and now received as evidence. The fraction is passed in to separately
-	// to slash unbonding and rebonding delegations.
+	// ABCI, and now received as evidence. The fraction is passed in separately to
+	// slash unbonding and rebonding delegations.
 	slashFractionDoubleSign, err := k.slashingKeeper.SlashFractionDoubleSign(ctx)
 	if err != nil {
 		return err
