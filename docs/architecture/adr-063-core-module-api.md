@@ -51,7 +51,7 @@ components to be delayed longer than they would if things were more stable and l
 
 ## Decision
 
-The `core` API proposes a set of core APIs that modules can rely on to interact with the state machine and expose their
+The `core` API proposes a set of core APIs that modules can rely on in order to interact with the state machine and expose their
 functionalities to it that are designed in a principled way such that:
 
 * tight coupling of dependencies and unrelated functionalities is minimized or eliminated
