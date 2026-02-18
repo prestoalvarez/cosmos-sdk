@@ -182,7 +182,7 @@ func TestGetValidatorSortingUnmixed(t *testing.T) {
 		keeper.TestingUpdateValidator(f.stakingKeeper, f.sdkCtx, validators[i], true)
 	}
 
-	// first make sure everything made it in to the gotValidator group
+	// first make sure everything made it into the gotValidator group
 	resValidators, err := f.stakingKeeper.GetBondedValidatorsByPower(f.sdkCtx)
 	assert.NilError(t, err)
 	assert.Equal(t, n, len(resValidators))
@@ -303,7 +303,7 @@ func TestGetValidatorSortingMixed(t *testing.T) {
 	assert.Equal(t, types.Bonded, val3.Status)
 	assert.Equal(t, types.Bonded, val4.Status)
 
-	// first make sure everything made it in to the gotValidator group
+	// first make sure everything made it into the gotValidator group
 	resValidators, err := f.stakingKeeper.GetBondedValidatorsByPower(f.sdkCtx)
 	assert.NilError(t, err)
 	// The validators returned should match the max validators
