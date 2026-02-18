@@ -6,7 +6,7 @@ import "gogoproto/gogo.proto";
 
 option go_package = "github.com/cosmos/cosmos-sdk/crypto/keys/bls12_381";
 
-// PubKey is an bls12_381 public key for handling CometBFT keys in SDK.
+// PubKey is a bls12_381 public key for handling CometBFT keys in SDK.
 // It's needed for Any serialization and SDK compatibility.
 // It must not be used in a non Tendermint key context because it doesn't implement
 // ADR-28. Nevertheless, you will like to use bls12_381 in app user level
