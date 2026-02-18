@@ -40,8 +40,8 @@ var (
 	UnbondingDelegationKey           = []byte{0x32} // key for an unbonding-delegation
 	UnbondingDelegationByValIndexKey = []byte{0x33} // prefix for each key for an unbonding-delegation, by validator operator
 	RedelegationKey                  = []byte{0x34} // key for a redelegation
-	RedelegationByValSrcIndexKey     = []byte{0x35} // prefix for each key for an redelegation, by source validator operator
-	RedelegationByValDstIndexKey     = []byte{0x36} // prefix for each key for an redelegation, by destination validator operator
+	RedelegationByValSrcIndexKey     = []byte{0x35} // prefix for each key for a redelegation, by source validator operator
+	RedelegationByValDstIndexKey     = []byte{0x36} // prefix for each key for a redelegation, by destination validator operator
 
 	UnbondingIDKey    = []byte{0x37} // key for the counter for the incrementing id for UnbondingOperations
 	UnbondingIndexKey = []byte{0x38} // prefix for an index for looking up unbonding operations by their IDs
