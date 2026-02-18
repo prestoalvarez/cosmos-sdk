@@ -176,7 +176,7 @@ gaia tx ... --from=<key name>
 
 It is vital that the root command of an application uses `PersistentPreRun()` cobra command property for executing the command, so all child commands have access to the server and client contexts. These contexts are set as their default values initially and may be modified, scoped to the command, in their respective `PersistentPreRun()` functions. Note that the `client.Context` is typically pre-populated with "default" values that may be useful for all commands to inherit and override if necessary.
 
-Here is an example of an `PersistentPreRun()` function from `simapp`:
+Here is an example of a `PersistentPreRun()` function from `simapp`:
 
 ```go reference
 https://github.com/cosmos/cosmos-sdk/blob/v0.53.0/simapp/simd/cmd/root_v2.go#L81-L120
