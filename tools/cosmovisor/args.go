@@ -52,7 +52,7 @@ const (
 	cfgExtension = "toml"
 )
 
-// Config is the information passed in to control the daemon
+// Config is the information passed to control the daemon
 type Config struct {
 	Home                     string        `toml:"daemon_home" mapstructure:"daemon_home"`
 	Name                     string        `toml:"daemon_name" mapstructure:"daemon_name"`
